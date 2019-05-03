@@ -1,14 +1,5 @@
-num_a = 5
-antennas = [int(input()) for _ in range(num_a)]
+# 一番通信が遠い物だけ調べればよい
+N = 5
+inputs = [int(input()) for _ in range(N)]
 k = int(input())
-exist = False
-for q in range(num_a - 1, 0, -1):
-    for p in range(q - 1, -1, -1):
-        if antennas[q] - antennas[p] > k:
-            exist = True
-            break
-
-if exist:
-    print(":(")
-else:
-    print("Yay!")
+print(":(" if inputs[N-1] - inputs[0] > k else "Yay!")
