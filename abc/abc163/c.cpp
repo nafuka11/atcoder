@@ -8,9 +8,9 @@ int main()
   vector<int> employees(num_employee);
   for (int i = 0; i < num_employee - 1; i++)
   {
-    int num_bos;
-    cin >> num_bos;
-    employees.at(num_bos - 1)++;
+    int num_boss;
+    cin >> num_boss;
+    employees.at(num_boss - 1)++;
   }
   for (auto employee : employees)
   {
